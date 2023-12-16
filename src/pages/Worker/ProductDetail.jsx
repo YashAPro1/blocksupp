@@ -43,13 +43,15 @@ const styles = {
   container: {
     // maxWidth: '1200px',
     width:"100%",
-    height:"100vh",
+    height:"100%",
     margin: 'auto',
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    // display: 'flex',
+    // flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItem:"center",
     padding: '20px',
     backgroundColor:"#191926",
+    // margin:"auto"
 
   },
   productDetails: {
@@ -102,7 +104,12 @@ const styles = {
     
   },
   image: {
-    width: '400px',
+    width: '100%',
+    height: 'auto',
+    borderRadius: '5px',
+  },
+  productImage: {
+    width: '100%',
     height: 'auto',
     borderRadius: '5px',
   },

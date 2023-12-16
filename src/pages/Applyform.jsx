@@ -24,7 +24,7 @@ const Applyform = () => {
   return (
     <> 
     <Navbar/>
-    <div style={styles.cover}>
+    {/* <div style={styles.cover}> */}
       <div style={styles.container}>
         <div style={styles.formContainer}>
           <h2 style={styles.header}>Apply for a Position</h2>
@@ -72,7 +72,7 @@ const Applyform = () => {
           </form>
         </div>
       </div>
-    </div>
+    {/* </div> */}
     </>
   );
 };
@@ -83,35 +83,35 @@ const styles = {
         top: 0,
         left: 0,
         width: '100%',
-        height: '100%',
+        // height: '100%',
         background: 'rgba(0, 0, 0, 0.3)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // display: 'flex',
+        // justifyContent: 'center',
+        // alignItems: 'center',
     },
   container: {
-    width: '80%',
-    height:"100%",
+    width: '100%',
+    // height:"50%",
     // maxWidth: '400px',
-    position: 'relative',
-    marginRight:"1rem",
-    marginTop:"8rem"
+    // position: 'fixed'    ,
+    // marginRight:"1rem",
+    // marginTop:"8rem"
 
   },
   formContainer: {
     padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '5px',
+    // border: '1px solid #ccc',
+    // borderRadius: '5px',
     backgroundColor: '#191926',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    // boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
     width:"100%",
-    // height:"100vh",
-    marginTop:"1rem"
+    height:"100%",
+    // marginTop:"1rem" 
   },
   header: {
     textAlign: 'center',
     color: '#ffffff',
-    marginBottom: '20px',
+    // marginBottom: '20px',
   },
   form: {
     display: 'flex',

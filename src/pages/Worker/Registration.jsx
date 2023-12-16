@@ -65,7 +65,7 @@ class Registration extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.main} >
+      <div className={classes.main}  >
         <CssBaseline />
 
         <Paper className={classes.paper}>
