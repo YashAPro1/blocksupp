@@ -79,20 +79,24 @@ const Applyform = () => {
 
 const styles = {
   cover: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
-    background: 'rgba(0, 0, 0, 0.3)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: 'rgba(0, 0, 0, 0.3)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
   container: {
-    width: '90%',
-    maxWidth: '400px',
+    width: '80%',
+    height:"100%",
+    // maxWidth: '400px',
     position: 'relative',
+    marginRight:"1rem",
+    marginTop:"8rem"
+
   },
   formContainer: {
     padding: '20px',
@@ -100,6 +104,9 @@ const styles = {
     borderRadius: '5px',
     backgroundColor: '#191926',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    width:"100%",
+    // height:"100vh",
+    marginTop:"1rem"
   },
   header: {
     textAlign: 'center',
@@ -118,7 +125,7 @@ const styles = {
     fontSize: '16px',
   },
   submitButton: {
-    marginTop: '20px',
+    marginTop: '80%',
     padding: '15px',
     backgroundColor: '#4CAF50',
     color: 'white',

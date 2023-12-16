@@ -48,21 +48,17 @@ const Dashboard = () => {
       {/* Display product cards */}
       <div style={styles.productContainer}>
         {products.map((product) => (
+        <Link to="/detail">
           <div key={product.id} style={styles.productCard}>
-            <h3>{product.name}</h3>
-            <Link to="/detail">
+            <h3 style={styles.header1}>{product.name}</h3>
+            
                 <img
                 src={product.image}
                 alt={`Product ${product.id}`}
                 style={styles.productImage}
                 />
-            </Link>
-            
-            
-            
-            
-            
-          </div>
+            </div>
+        </Link>
         ))}
       </div>
 
@@ -82,39 +78,60 @@ const Dashboard = () => {
 const styles = {
   container: {
     width:"100%",
-    margin: 'auto',
+    // margin: 'auto',
     padding: '20px',
     backgroundColor: '#191926',
-    margin:"2px",   
+    // margin:"2px",   
+    overflow: "hidden",
   },
   header: {
     textAlign: 'center',
     color: '#fff',
     marginBottom: '20px',
   },
+  header1: {
+    width:"100%",
+    backgroundColor:"#333",
+    marginBottom: '0px',
+    color:"#fff"
+  },
   productContainer: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 2fr))',
-    gap: '20px',
+    // display: 'grid',
+    // gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 2fr))',
+    // gap: '20px',
+    display:"flex",
+    justifyContent:"center",
+    flexWrap:"wrap",
+    // flex:"1 1 40px"
+
+    "&:hover":{
+        transform:"scale(1.2)",
+    }
 
   },
   productCard: {
-    padding: '20px',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    backgroundColor: 'white',
-    boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center',
-    transition: 'transform 0.3s',
-    overflow: 'hidden',
-    position: 'relative',
+    // padding: '20px',
+    // border: '1px solid #ccc',
+    // borderRadius: '8px',
+    // backgroundColor: 'white',
+    // boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    // textAlign: 'center',
+    // transition: 'transform 0.3s',
+    // overflow: 'hidden',
+    // position: 'relative',
+    margin:"1rem",
+    // color:"white",
+    // position:"absolute",
+
   },
   productImage: {
     maxWidth: '100%',
-    height: '150px',
+
+    height: '7rem',
     objectFit: 'cover',
     borderRadius: '8px',
     marginBottom: '10px',
+    // margin:"1rem"
   },
   fileInput: {
     marginTop: '10px',
@@ -124,21 +141,7 @@ const styles = {
     marginTop: '20px',
     textAlign: 'center',
   },
-  webcam: {
-    width: '100%',
-    maxWidth: '600px',
-    border: '1px solid #ccc',
-    borderRadius: '8px',
-    marginBottom: '10px',
-  },
-  captureButton: {
-    padding: '15px',
-    backgroundColor: '#4CAF50',
-    color: 'white',
-    border: 'none',
-    borderRadius: '8px',
-    cursor: 'pointer',
-  },
+
 };
 
 export default Dashboard;
