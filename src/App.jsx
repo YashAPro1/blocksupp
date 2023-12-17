@@ -8,6 +8,7 @@ import Dashboard from './pages/Worker/DashBoard';
 import Navbar from './pages/components/Navbar';
 import ProductDetailPage from './pages/Worker/ProductDetail';
 import Applyform from './pages/Applyform';
+import Reg from './pages/components/Reg';
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +16,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Resgistration />} />
+          {/* <Route exact path="/" element={<Resgistration />} /> */}
+          <Route exact path="/" element={<Reg />} />
           <Route exact path="/dash" element={<Dashboard />} />
           <Route exact path="/detail" element={<ProductDetailPage />} />
           <Route exact path="/apply" element={<Applyform />} />

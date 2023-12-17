@@ -16,6 +16,7 @@ import ErrorIcon from "@material-ui/icons/Error";
 import VisibilityTwoToneIcon from "@material-ui/icons/VisibilityTwoTone";
 import VisibilityOffTwoToneIcon from "@material-ui/icons/VisibilityOffTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
+import { ChainId, ConnectWallet, Web3Button, useContract, useMintNFT, useNFTs } from "@thirdweb-dev/react";
 
 class Registration extends Component {
   state = {
@@ -64,6 +65,19 @@ class Registration extends Component {
 
   render() {
     const { classes } = this.props;
+
+    const {contract} = useContract(
+      "0xd9145CCE52D386f254917e481eB44e9943F39138"
+    )
+
+    // const {data: nfts, isLoading, isError} = useNFTs(contract);
+    // const {mutate: mintNft} = useMintNFT(contract);
+
+    // if(isError){
+
+    // }
+
+    // const 
     return (
       <div className={classes.main}  >
         <CssBaseline />
@@ -79,7 +93,7 @@ class Registration extends Component {
             
 
             
-            <Button
+            {/* <Button
               disabled={!this.isValid()}
               disableRipple
               fullWidth
@@ -89,7 +103,12 @@ class Registration extends Component {
               onClick={this.submitRegistration}
             >
               Connect with your Wallet.
-            </Button>
+            </Button> */}
+            {/* <Web3Button
+              contractAddress="{{contract_address}}"
+              action={async (contract) => contract.call("myFunctionName")}
+            >Login</Web3Button> */}
+            {/* <ConnectWallet /> */}
           </form>
 
           {this.state.error ? (
